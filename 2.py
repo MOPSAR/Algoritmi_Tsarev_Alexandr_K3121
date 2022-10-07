@@ -26,14 +26,14 @@ def Rang(matrix):
                 for q in range(3):
                     if i != p and j != q:
                         if minor != 0 and t == 0:
-                            rang = 1
+                            rang += 1
                             t = 1
                         minor.append(matrix[p][q])
             minorr2 = minor[0] * minor[3] - minor[1] * minor[2]
-            if minorr2 != 0: rang = 2
+            if minorr2 != 0: rang += 1
             minor2.append(minorr2)
     minor3= matrix[0][0] * minor2[0] - matrix[0][1] * minor2[1] + matrix[0][2] * minor2[2]
-    if minor3!= 0: rang=3
+    if minor3!= 0: rang += 1
     return rang
 
 
